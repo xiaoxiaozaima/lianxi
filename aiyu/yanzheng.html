@@ -1,0 +1,137 @@
+<!doctype html>
+<html style='font-size:100px;'>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="reset.css">
+	<style>
+		.box{
+			width: 6.4rem;
+			height: 11.36rem;
+			background: url(img/bj_ay@2x.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+		.head{
+			height: 0.44rem;
+			overflow: hidden;
+			padding: 0.25rem 0 0.1rem ;
+			background: #E83E4A;
+		}
+		.headl{
+			font-size: 0.35rem;
+			float:left;
+			color: #fff;
+			margin-left: 0.25rem;
+			font-weight: bold;
+			font-family: '宋体';
+		}
+		.headc{
+			font-size: 0.35rem;
+			float: left;
+			color: #fff;
+			margin-left: 2.41rem;
+		}
+		.con{
+			width: 4.4rem;
+			margin: 0.6rem auto 0;
+		}
+		.con1{
+			width: 4.4rem;
+			height: 1.06rem;
+			background: url(img/btn_c_shuzima@2x.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+			margin-bottom: 0.25rem;
+			font-size: 0.35rem;
+			color: #fff;
+			line-height: 1.06rem;
+			text-align: center;
+			position: relative;
+		}
+		.con2{
+			width: 4.4rem;
+			height: 1.06rem;
+			background: url(img/hq_03.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+			margin-bottom: 0.6rem;
+			font-size: 0.35rem;
+			color: #fff;
+			line-height: 1.06rem;
+			text-align: center;
+		}
+		.tx{
+			width: 3.8rem;
+			height: 0.6rem;
+			position: absolute;
+			left: 0.28rem;
+			top: 0.23rem;
+			background: transparent;
+			border: 1px solid #FD6F98;
+			font-size: 0.25rem;
+			text-align: center;
+			color: #fff;
+		}
+		input::-webkit-input-placeholder{
+			color: #fff;
+		}
+		.con3{
+			width: 4.9rem;
+			margin: 0.84rem auto 0;
+		}
+		.text1{
+			font-size: 0.3rem;
+			color: #fff;
+			margin-bottom: 0.2rem;
+		}
+		.text2{
+			font-size: 0.23rem;
+			line-height: 0.42rem;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="head">
+			<div class="headl"><</div>
+			<div class="headc">验证</div>
+		</div>
+		<div class="con">
+			<div class="con1">
+				<input type="text" name="" value="" class="tx" placeholder='请填写验证码'>
+			</div>
+			<div class="con2">点击验证</div>
+		</div>
+		<div class="con3">
+			<div class="text1">说明文字介绍如何配对？</div>
+			<div class="text2">获取或发送验证码验证成功后可与对方配对，查看对方信息，和对方聊天等等获取或发送验证码验证成功后可与对方配对，查看对方 信息，和对方聊天等等</div>
+		</div>
+		
+	</div>
+</body>
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	var html=document.getElementsByTagName('html')[0];
+	function auto(){
+		var width=document.documentElement.clientWidth;
+		var cc=(100/640)*width;
+		html.style.fontSize=cc+'px';
+	}
+	auto()
+	window.onresize=function(){
+		auto();
+	}
+	$('.headl').click(function (){
+		window.open('peidui.html','_blank');
+	})
+	$('.con2').click(function (){
+		if ($('.tx').val()=='') {
+			alert('请输入验证码');
+		} else{
+			window.open('aiyu.html','_blank');
+		};
+	})
+</script>
+</html>

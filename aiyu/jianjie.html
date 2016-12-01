@@ -1,0 +1,150 @@
+<!doctype html>
+<html style='font-size:100px;'>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="reset.css">
+	<style>
+		.box{
+			width: 6.4rem;
+			height: 11.36rem;
+			background-size: 100% 100%;
+			position: relative;
+		}
+		#xb{
+			position: absolute;
+			left: 2.58rem;
+			bottom: 0.68rem;
+			overflow: hidden;
+		}
+		ol li{
+			float: left;
+			width: 0.2rem;
+			height: 0.2rem;
+			background: #fff;
+			border-radius: 50%;
+			margin-left: 0.15rem;
+		}
+		.ulli{
+			background: #E83E49;
+		}
+		#inner{
+			width: 6.4rem;
+			height: 11.36rem;
+			position: relative;
+		}
+		#inner img{
+			width: 100%;
+			height: 100%;
+		}
+		ul li{
+			width: 6.4rem;
+			height: 11.36rem;
+			display: none;
+		}
+		.show{
+			display:block;
+		}
+
+		.du{
+			width: 2.4rem;
+			height: 0.8rem;
+			background: rgba(255,255,255,0.1);
+			position: absolute;
+			left: 0.55rem;
+			bottom: 1.5rem;
+			text-align: center;
+			line-height: 0.8rem;
+			font-size: 0.3rem;
+			color: #fff;
+		}
+		.zc{
+			width: 2.4rem;
+			height: 0.8rem;
+			background: rgba(255,255,255,0.1);
+			position: absolute;
+			right: 0.55rem;
+			bottom: 1.5rem;
+			text-align: center;
+			line-height: 0.8rem;
+			font-size: 0.3rem;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul id="inner">
+			<li class="show"><img src="img/闪屏页1.jpg" alt=""></li>
+			<li><img src="img/闪屏页2.jpg" alt=""></li>
+			<li>
+				<img src="img/闪屏页3.jpg" alt="">
+				<div class="du">登录</div>
+				<div class="zc">注册</div>
+			</li>
+		</ul>
+		<ol id="xb">
+			<li class="ulli"></li>
+			<li></li>
+			<li></li>
+		</ol>
+	</div>
+</body>
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+
+	var html=document.getElementsByTagName('html')[0];
+	function auto(){
+		var w=document.documentElement.clientWidth;
+		var c=(100/640)*w;
+		html.style.fontSize=c+'px';
+	}
+	auto();
+	window.onresize=function(){
+		auto();
+	}
+
+	var inner=document.getElementById('inner');
+	var innli=inner.getElementsByTagName('li');
+	var xb=document.getElementById('xb');
+	var xbli=xb.getElementsByTagName('li');
+	var x=0,x1=0,n=0;
+
+	window.addEventListener('touchstart',function (e){
+		x=e.touches[0].clientX;
+		x1=e.touches[0].clientX;
+	},false)
+	window.addEventListener('touchmove',function (e){
+		x1=e.touches[0].clientX;
+	},false)
+	window.addEventListener('touchend',function (e){
+		if (x-x1<-200) {
+			innli[n].style.display='none';
+			xbli[n].className="";
+			n--;
+			if (n<0) {
+				n=0;
+			};
+		} else if (x-x1>200) {
+			innli[n].style.display='none';
+			xbli[n].className='';
+			n++;
+			if (n>=xbli.length) {
+				n=xbli.length-1;
+			};
+		};
+		innli[n].style.display='block';
+		xbli[n].className='ulli';
+	},false)
+
+	$('.du').click(function (){
+		window.open('denglu.html','_blank')
+	})
+	$('.zc').click(function (){
+		window.open('zhuce.html','_blank')
+	})
+</script>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html style='font-size:100px;'>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="reset.css">
+	<style>
+		.box{
+			width: 6.4rem;
+			height: 11.36rem;
+			background-size: 100% 100%;
+		}
+		.head{
+			height: 0.44rem;
+			overflow: hidden;
+			padding: 0.25rem 0 0.1rem ;
+			background: #E83E4A;
+		}
+		.headl{
+			font-size: 0.35rem;
+			float:left;
+			color: #fff;
+			margin-left: 0.25rem;
+			font-weight: bold;
+			font-family: '宋体';
+		}
+		.headc{
+			font-size: 0.35rem;
+			float: left;
+			color: #fff;
+			margin-left: 2.41rem;
+		}
+		.con1{
+			width: 6.4rem;
+			height: 2.425rem;
+			background: url(img/sz_02.jpg) 0 0 no-repeat;
+			padding-top: 0.625rem;
+		}
+		.con1_1{
+			width: 1.8rem;
+			height: 1.8rem;
+			background: url(img/btn-ziliao-touxiang@2x.png) 0 0 no-repeat;
+			margin:0 auto ;
+		}
+		.con2{
+			width: 6.12rem;
+			height: 0.86rem;
+			padding: 0.18rem 0.1rem 0 0.18rem;
+			overflow: hidden;
+		}
+		.con2_l{
+			width: 0.8rem;
+			height: 0.8rem;
+			background: url(img/btn_wode@2x.png) 0 0 no-repeat;
+			margin-right: 0.25rem;
+			float: left;
+		}
+		.con3_l{
+			width: 0.8rem;
+			height: 0.8rem;
+			background: url(img/btn_w-shouji@2x.png) 0 0 no-repeat;
+			margin-right: 0.25rem;
+			float: left;
+		}
+		.con4_l{
+			width: 0.8rem;
+			height: 0.8rem;
+			background: url(img/btn_xingbie@2x.png) 0 0 no-repeat;
+			margin-right: 0.25rem;
+			float: left;
+		}
+		input::-webkit-input-placeholder{
+			font-family: '微软雅黑';
+		}
+		.con2_r{
+			margin-top: 0.15rem;
+			float: left;
+			width: 5rem;
+			height: 0.7rem;
+			border-bottom: 1px solid #ccc;
+			color: #ccc;
+			font-family: '宋体';
+			font-weight: bold;
+			font-size: 0.3rem;
+			text-align:right;
+			position: relative;
+			line-height: 0.5rem;
+		}
+		.con2_r input{
+			width: 4.5rem;
+			height: 0.5rem;
+			border: 1px solid #fff;
+			color: #7A7A7A;
+			font-size: 0.24rem;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.con5{
+			width: 4.56rem;
+			height: 0.8rem;
+			background: #E83E4A;
+			color: #fff;
+			font-size: 0.36rem;
+			text-align: center;
+			line-height: 0.8rem;
+			margin: 0.92rem auto 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="head">
+			<div class="headl"><</div>
+			<div class="headc">设置</div>
+		</div>
+		<div class="con1">
+			<div class="con1_1"></div>
+		</div>
+		<div class="con2">
+			<div class="con2_l"></div>
+			<div class="con2_r">
+				<input type="text" name="" value="" placeholder='姓名' class="xm">>
+			</div>
+		</div>
+		<div class="con2">
+			<div class="con3_l"></div>
+			<div class="con2_r">
+				<input type="text" name="" value="" placeholder='姓别' class="xb">>
+			</div>
+		</div>
+		<div class="con2">
+			<div class="con4_l"></div>
+			<div class="con2_r">
+				<input type="text" name="" value="" placeholder='手机号码' class="sjhm">>
+			</div>
+		</div>
+		<div class="con5">保存</div>
+	</div>
+</body>
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="ort.js"></script>
+<script type="text/javascript">
+	$('.con5').click(function (){
+		if ($('.xm').val()==''||$('.xb').val()==''||$('.sjhm').val()=='') {
+			alert('请请将内容填写完整');
+		} else{
+			alert('保存成功');
+		};
+	})
+	$('.headl').click(function (){
+		window.open('aiyu.html','_blank');
+	})
+</script>
+</html>
